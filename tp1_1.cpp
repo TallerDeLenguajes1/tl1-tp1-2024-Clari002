@@ -11,6 +11,6 @@ int main()
     printf("valor de a: %d\n",*punt);
     printf("direccion de memoria de a: %p\n", &a);
     printf("direccion de memoria del puntero: %p\n", &punt);
-    printf("Tamaño de la memoria usada: %d", sizeof(a));
-
+    printf("Tamaño de la memoria usada: %lu", sizeof(a));
+    return 0;
 }
