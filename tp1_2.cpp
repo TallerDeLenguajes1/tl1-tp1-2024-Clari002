@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include <stdio.h>
+
 
 int funcCuadradoDeNum(int x);
-void procedimientoCuadrado(int * valor);
+void procedimientoCuadrado(int valor);
 
 
 int main()
@@ -15,18 +15,12 @@ int main()
     int cuadrado = funcCuadradoDeNum(num);
     printf("El cuadrado de %d es: %d", num, cuadrado);
     
-    //cinsigna 2
-   int num2;
-   int *puntero;
-   puntero = &num2;
-   printf("\nIngrese un numero: ");
-   scanf("%d", &num2);
-   int aux = num2;
+    //consigna 2
+    int num2;
+    printf("\nIngrese un numero: ");
+    scanf("%d", &num2);
+    procedimientoCuadrado(num2);
 
-   procedimientoCuadrado(puntero);
-   printf("El cuadrado de %d es: %d\n\n", aux, num2);
-
-   
     return 0; 
 }
 
@@ -36,8 +30,9 @@ int funcCuadradoDeNum(int x)
 }
 
 
-void procedimientoCuadrado(int * valor)
+void procedimientoCuadrado(int valor)
 {
-    *valor = *valor * (*valor);
+    int cuadrado = valor * valor;
+    printf("El cuadrado de %d es: %d", valor, cuadrado);
 }
 
